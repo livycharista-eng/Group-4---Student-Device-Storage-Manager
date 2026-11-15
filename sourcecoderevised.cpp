@@ -178,13 +178,13 @@ while (!(cin >> items[count].itemID) ||
 }
 
     // Input validation for category
-    cout << "Enter Category (Document, Assignment, Project, Media, Other): ";
+    cout << "Enter Category (Development, Document, Dataset, Media, Other): ";
     getline(cin, items[count].category);
 
 
-while (toLowerCase(items[count].category) != "document" &&
-       toLowerCase(items[count].category) != "assignment" &&
-       toLowerCase(items[count].category) != "project" &&
+while (toLowerCase(items[count].category) != "development" &&
+       toLowerCase(items[count].category) != "document" &&
+       toLowerCase(items[count].category) != "dataset" &&
        toLowerCase(items[count].category) != "media" &&
        toLowerCase(items[count].category) != "other") {
 
@@ -326,7 +326,7 @@ void classifySize(item items[], int count) {
 void storageByCategory(item items[], int count) {  
 
     string categories[] = {
-        "Document", "Media", "Assignment", "Project", "Other"
+        "Development", "Document", "Dataset", "Media", "Other"
     };
 
     cout << "\n========== STORAGE BY CATEGORY ==========\n";
